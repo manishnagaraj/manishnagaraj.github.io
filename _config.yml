@@ -80,7 +80,7 @@ mastodon_username: # your mastodon instance+username in the format instance.tld/
 linkedin_username: m-nagaraj # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: K-ihHacAAAAJ # your Google Scholar ID
-semanticscholar_id: 153839324 # your Semantic Scholar ID
+semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 orcid_id: 0000-0002-2032-9175 # your ORCID ID
 medium_username: # your Medium username
@@ -107,6 +107,8 @@ facebook_id: # your facebook id
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
+contact_note: >
+  I can be contacted at my Purdue email
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification

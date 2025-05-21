@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://engineering.purdue.edu/ECE'>Purdue University</a>. <a href='https://https://engineering.purdue.edu/NRL'>Nano(Neuro) Electronics Laboratory</a>.
+subtitle: <a href='https://engineering.purdue.edu/ECE'>Purdue University</a>. <a href='https://engineering.purdue.edu/NRL'>Nano(Neuro) Electronics Laboratory</a>.
 
 profile:
   align: right
