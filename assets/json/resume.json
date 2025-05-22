@@ -4,7 +4,7 @@
     "label": "PhD Candidate in Electrical and Computer Engineering",
     "email": "mnagara@purdue.edu",
     "phone": "+1-765-701-7970",
-    "url": "https://linkedin.com/in/m-nagaraj",
+    "LinkedIn": "https://linkedin.com/in/m-nagaraj",
     "summary": "PhD candidate focused on data efficiency and optimization in machine learning.",
     "location": {
       "city": "West Lafayette",
@@ -28,8 +28,8 @@
     {
       "institution": "Purdue University",
       "area": "Electrical & Computer Engineering",
-      "studyType": "PhD",
-      "startDate": "2019-05",
+      "studyType": "Doctor of Philosophy (Ph.D.)",
+      "startDate": "2019",
       "endDate": "Present",
       "gpa": "3.66",
       "courses": [
@@ -41,18 +41,18 @@
     {
       "institution": "Purdue University",
       "area": "Electrical & Computer Engineering",
-      "studyType": "MS",
-      "startDate": "2017-08",
-      "endDate": "2019-05",
+      "studyType": "Master of Science (M.S.)",
+      "startDate": "2017",
+      "endDate": "2019",
       "gpa": "3.72",
       "thesis": "Energy Efficient Byzantine Agreement Protocols for Cyber-Physical Resilience"
     },
     {
-      "institution": "PES Institute of Technology and Science",
+      "institution": "PES Institute of Technology and Science, Bangalore",
       "area": "Electronics and Communications",
-      "studyType": "BE",
-      "startDate": "2013-08",
-      "endDate": "2017-05",
+      "studyType": "Bachelor of Engineering (B.E.)",
+      "startDate": "2013",
+      "endDate": "2017",
       "gpa": "9.77"
     }
   ],
@@ -76,19 +76,21 @@
       "name": "Efficient Fine-tuning of LLMs",
       "description": "Lightweight data selection pipeline for fine-tuning LLMs.",
       "keywords": ["LLMs", "data selection", "edge AI"],
-      "startDate": "2019-05",
       "highlights": [
-        "On-device personalization without gradients.",
-        "Model scale transferability (LLaMA-3 8B ? 70B)."
+       "Developed a lightweight, correlation-based data selection pipeline.",
+        "Enables on-device personalization without gradients/Hessians.",
+        "Transfers across model scales (e.g., LLaMA-3 8B - 70B).",
+        "Work in progress.",
       ]
     },
     {
-      "name": "Loss Trajectory Coresets",
+      "name": "Finding the Muses- Identifying Coresets Through Loss Trajectories",
       "description": "Efficient coreset selection using loss trajectory correlation.",
       "keywords": ["coresets", "loss trajectory", "data efficiency"],
       "highlights": [
-        "SOTA performance on CIFAR-100/ImageNet.",
-        "Paper under peer review."
+        "Introduced Loss Trajectory Correlation (LTC) metric.",
+        "SOTA results on CIFAR-100 and ImageNet-1k.",
+        "Manuscript under peer review.",
       ]
     },
     {
@@ -96,7 +98,8 @@
       "description": "Energy-efficient object detection using event cameras.",
       "keywords": ["event cameras", "object detection"],
       "highlights": [
-        "Demonstrated at ICRA and CVPR Workshops 2023."
+        "Lightweight framework leveraging event-driven camera data.",
+        "Demonstrated at ICRA 2023 and CVPR 2023 Workshops.",
       ]
     },
     {
@@ -140,7 +143,7 @@
   "references": [
     {
       "name": "Prof. Kaushik Roy",
-      "reference": "PhD Advisor, Purdue University ? kaushik@purdue.edu"
+      "reference": "PhD Advisor, Purdue University, kaushik@purdue.edu"
     }
   ]
 }
