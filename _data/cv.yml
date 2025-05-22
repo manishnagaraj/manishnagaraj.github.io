@@ -58,20 +58,20 @@
         - Enables on-device personalization without gradients/Hessians.
         - Transfers across model scales (e.g., LLaMA-3 8B - 70B).
         - Work in progress.
-    - title: Finding the Muses: Identifying Coresets Through Loss Trajectories
+    - title: Finding the Muses- Identifying Coresets Through Loss Trajectories
       institution: Ph.D. Dissertation, Purdue University
       year: 2019 - Present
       description:
         - Introduced Loss Trajectory Correlation (LTC) metric.
         - SOTA results on CIFAR-100 and ImageNet-1k.
         - Manuscript under peer review.
-    - title: DOTIE: Energy-Efficient Object Detection Using Event Cameras
+    - title: DOTIE- Energy-Efficient Object Detection Using Event Cameras
       institution: Ph.D. Research, Purdue University
       year: 2023
       description:
         - Lightweight framework leveraging event-driven camera data.
         - Demonstrated at ICRA 2023 and CVPR 2023 Workshops.
-    - title: TOFU: Federated Learning with Data and Communication Efficiency
+    - title: TOFU- Federated Learning with Data and Communication Efficiency
       institution: Ph.D. Research, Purdue University
       year: 2024
       description:
