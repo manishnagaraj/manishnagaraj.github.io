@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I passed my preliminary examination!
-date: 2023-05-28 00:00:00-0500
+date: 2024-10-25 00:00:00-0500
 inline: false
 related_posts: false
 ---
