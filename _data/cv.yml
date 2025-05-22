@@ -21,27 +21,27 @@
       institution: Purdue University, West Lafayette, IN
       year: 2019 - Present
       description:
-        - GPA: 3.66
-        - Relevant Areas: Data Efficiency, Privacy-Preserving Machine Learning, Optimization Techniques
-        - Research Advisor: Prof. Kaushik Roy
+        - GPA - 3.66
+        - Relevant Areas - Data Efficiency, Privacy-Preserving Machine Learning, Optimization Techniques
+        - Research Advisor - Prof. Kaushik Roy
     - title: MS in Electrical & Computer Engineering
       institution: Purdue University, West Lafayette, IN
       year: 2017 - 2019
       description:
-        - GPA: 3.72
-        - Thesis: Energy Efficient Byzantine Agreement Protocols for Cyber-Physical Resilience
+        - GPA - 3.72
+        - Thesis - Energy Efficient Byzantine Agreement Protocols for Cyber-Physical Resilience
     - title: Bachelor of Engineering in Electronics and Communications
       institution: PES Institute of Technology and Science, Bangalore, India
       year: 2013 - 2017
       description:
-        - GPA: 9.77/10.0
+        - GPA - 9.77/10.0
 
 - title: Experience
   type: time_table
   contents:
     - title: Research Intern, Integrated Systems Team
       institution: Latent AI, Skillman, NJ
-      year: May 2023 - August 2023
+      year: Summer 2023
       description:
         - Built data annotation tools for anomaly detection frameworks.
         - Designed scalable systems for handling noisy datasets.
@@ -52,7 +52,7 @@
   contents:
     - title: Efficient Fine-tuning of LLMs Using Impact-Driven Data Selection
       institution: Ph.D. Dissertation, Purdue University
-      year: 2019 - Present
+      year: Present
       description:
         - Developed a lightweight, correlation-based data selection pipeline.
         - Enables on-device personalization without gradients/Hessians.
@@ -60,7 +60,7 @@
         - Work in progress.
     - title: Finding the Muses- Identifying Coresets Through Loss Trajectories
       institution: Ph.D. Dissertation, Purdue University
-      year: 2019 - Present
+      year: 2025
       description:
         - Introduced Loss Trajectory Correlation (LTC) metric.
         - SOTA results on CIFAR-100 and ImageNet-1k.
@@ -73,9 +73,9 @@
         - Demonstrated at ICRA 2023 and CVPR 2023 Workshops.
     - title: TOFU- Federated Learning with Data and Communication Efficiency
       institution: Ph.D. Research, Purdue University
-      year: 2024
+      year: 2023
       description:
-        - Reduced communication overhead by 10×.
+        - Reduced communication overhead by 10x.
         - Published at IEEE Access 2024.
 
 - title: Skills
