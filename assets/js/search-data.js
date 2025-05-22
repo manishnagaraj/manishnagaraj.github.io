@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
         },{id: "nav-cv",
           title: "cv",
           description: "Latest CV of Manish Nagaraj",
