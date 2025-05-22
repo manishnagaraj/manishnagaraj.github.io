@@ -35,14 +35,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-my-paper-tofu-got-accepted-for-publication-at-ieee-access",
-          title: 'My paper TOFU got accepted for publication at IEEE Access.',
-          description: "",
-          section: "News",},{id: "news-graduated-with-a-masters-degree-from-purdue-university-sparkles-smile",
+            },},{id: "news-graduated-with-a-masters-degree-from-purdue-university-sparkles-smile",
           title: 'Graduated with a Masters’ degree from Purdue University. :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "news-i-got-featured-in-the-student-spotlight-blog-at-nrl",
-          title: 'I got featured in the   Student Spotlight Blog  at NRL',
           description: "",
           section: "News",},{id: "news-started-interning-at-latentai",
           title: 'Started interning at  LatentAI  !',
@@ -52,18 +46,24 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-i-passed-my-preliminary-examination",
-          title: 'I passed my preliminary examination!',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_8/";
             },},{id: "news-check-out-my-blog-post-at-latent-ai-federated-learning-balancing-collaboration-and-privacy-in-the-digital-age",
           title: 'Check out my blog post at Latent AI - Federated learning: Balancing collaboration...',
           description: "",
           section: "News",},{id: "news-check-out-my-video-interview-at-latent-ai",
           title: 'Check out my  video interview  at Latent AI',
           description: "",
-          section: "News",},{id: "projects-project-1",
+          section: "News",},{id: "news-my-paper-tofu-got-accepted-for-publication-at-ieee-access",
+          title: 'My paper TOFU got accepted for publication at IEEE Access.',
+          description: "",
+          section: "News",},{id: "news-i-got-featured-in-the-student-spotlight-blog-at-nrl",
+          title: 'I got featured in the   Student Spotlight Blog  at NRL',
+          description: "",
+          section: "News",},{id: "news-i-passed-my-preliminary-examination",
+          title: 'I passed my preliminary examination!',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_8/";
+            },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {
