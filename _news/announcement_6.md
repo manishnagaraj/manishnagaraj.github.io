@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My paper TOFU got accepted for publication at IEEE Access.
+[TOFU](https://ieeexplore.ieee.org/abstract/document/10504799) got accepted for publication at IEEE Access.
