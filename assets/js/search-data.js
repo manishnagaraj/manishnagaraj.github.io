@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
+        },{id: "post-blog-post-on-federated-learning",
+        
+          title: "Blog post on Federated Learning",
+        
+        description: "Blog post during internship",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/latentai-blog/";
+          
+        },
+      },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
@@ -46,10 +57,7 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-check-out-my-blog-post-at-latent-ai-federated-learning-balancing-collaboration-and-privacy-in-the-digital-age",
-          title: 'Check out my blog post at Latent AI - Federated learning: Balancing collaboration...',
-          description: "",
-          section: "News",},{id: "news-check-out-my-video-interview-at-latent-ai",
+            },},{id: "news-check-out-my-video-interview-at-latent-ai",
           title: 'Check out my  video interview  at Latent AI',
           description: "",
           section: "News",},{id: "news-my-paper-tofu-got-accepted-for-publication-at-ieee-access",
