@@ -98,4 +98,3 @@ TOFU's effectiveness was demonstrated on MNIST and CIFAR-10 datasets, showing si
 TOFU offers a promising direction for building more practical and secure federated learning systems, especially where communication bandwidth is a bottleneck or privacy is paramount. The benefits of TOFU in terms of communication efficiency are expected to grow with increasing model sizes, as input data dimensions typically remain fixed.
 
 You can find more details in the full paper: {% cite nagaraj2024tofu %}
----
