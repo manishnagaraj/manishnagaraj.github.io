@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: "<a href='https://engineering.purdue.edu/ECE'>Purdue University</a>, <a href='https://engineering.purdue.edu/NRL'>Nano(Neuro) Electronics Laboratory</a>."
 

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: DOTIE - Detecting Objects through Temporal Isolation of Events
-description: An energy-efficient object detection technique using spiking neural networks and event cameras.
-img: assets/img/DOTIE_project/spike_architecture.PNG 
+title: DOTIE 
+description: Detecting Objects through Temporal Isolation of Events
+img: assets/img/DOTIE_project/spike_architecture.png 
 importance: 1
 category: Computer Vision
 related_publications: true 
@@ -47,7 +47,7 @@ The key advantages of this architecture include:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/assets/img/DOTIE_project/DOTIE_Loihi_CPU_comparison.PNG" title="DOTIE visualization" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DOTIE_project/visualization_of_dotie.png" title="DOTIE visualization" class="img-fluid rounded z-depth-1" %}
         </div>
 </div>
 <div class="caption">
@@ -89,7 +89,7 @@ The algorithm is asynchronous and can operate at the rate events are generated, 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/assets/img/DOTIE_project/DOTIE_Loihi_CPU_comparison.PNG" title="Loihi vs CPU Spikes/Bounding Box" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/assets/img/DOTIE_project/DOTIE_Loihi_CPU_comparison.png" title="Loihi vs CPU Spikes/Bounding Box" class="img-fluid rounded z-depth-1" %}
         </div>
 </div>
 <div class="caption">
