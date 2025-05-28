@@ -1,11 +1,11 @@
 ---
 layout: page
-title: DOTIE 
+title: DOTIE
 description: Detecting Objects through Temporal Isolation of Events
-img: assets/img/DOTIE_project/spike_architecture.png 
+img: assets/img/DOTIE_project/spike_architecture.png
 importance: 1
 category: Computer Vision
-related_publications: true 
+related_publications: true
 ---
 
 ## Motivation
@@ -15,7 +15,7 @@ Vision-based autonomous navigation systems necessitate fast and accurate object 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/publication_preview/DOTIE_GA.png" title="Motivation for DOTIE" class="img-fluid rounded z-depth-1" %}
-        </div>
+    </div>
 </div>
 
 ## Overview of Architecture
@@ -33,7 +33,7 @@ The fundamental principles behind the architecture are:
     <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/DOTIE_project/LiF.gif" title="LIF Neuron Behavior" class="img-fluid rounded z-depth-1" %}
     </div>
-<div>
+</div>
 <div class="caption">
     Left: Explanation of LIF neuron usage in DOTIE. Right: Visualization of Leaky Integrate and Fire (LIF) neuron dynamics.
 </div>
@@ -44,11 +44,10 @@ The key advantages of this architecture include:
 * Low latency and energy overhead due to the single-layer SNN and the nature of spiking neuron operations (accumulate vs. multiply-and-accumulate).
 * Scene independence, meaning the SNN parameters correspond to object speeds and can be fine-tuned before deployment without extensive retraining for new scenes.
 
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/DOTIE_project/visualization_of_dotie.png" title="DOTIE visualization" class="img-fluid rounded z-depth-1" %}
-        </div>
+    </div>
 </div>
 <div class="caption">
     Visualization of DOTIE in action.
@@ -89,13 +88,12 @@ The algorithm is asynchronous and can operate at the rate events are generated, 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/assets/img/DOTIE_project/DOTIE_Loihi_CPU_comparison.png" title="Loihi vs CPU Spikes/Bounding Box" class="img-fluid rounded z-depth-1" %}
-        </div>
+        {% include figure.liquid loading="eager" path="assets/img/DOTIE_project/DOTIE_Loihi_CPU_comparison.png" title="Loihi vs CPU Spikes/Bounding Box" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
 <div class="caption">
     Comparison of spike generation and bounding box output between Loihi (Lava) and CPU (PyTorch) implementations on an example frame from the MVSEC dataset.
 </div>
 
 This project showcases the advantages of using event cameras combined with spiking neural networks and neuromorphic hardware for efficient and low-latency object detection. You can find details in {% cite nagaraj2023dotie %} and {% cite roy2023live %}.
-
 
