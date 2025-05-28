@@ -4,34 +4,34 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-publications",
-          title: "publications",
+          title: "Publications",
           description: "Publications in reversed chronological order.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
         },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "Some of the projects I have worked on and am working on!",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
-          title: "repositories",
+          title: "Repositories",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
-          title: "cv",
+          title: "CV",
           description: "Latest CV of Manish Nagaraj",
           section: "Navigation",
           handler: () => {
@@ -78,9 +78,9 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_8/";
-            },},{id: "projects-dotie-detecting-objects-through-temporal-isolation-of-events",
-          title: 'DOTIE - Detecting Objects through Temporal Isolation of Events',
-          description: "An energy-efficient object detection technique using spiking neural networks and event cameras.",
+            },},{id: "projects-dotie",
+          title: 'DOTIE',
+          description: "Detecting Objects through Temporal Isolation of Events",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Dotie/";
             },},{
