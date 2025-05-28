@@ -5,7 +5,7 @@ permalink: /projects/
 description: Some of the projects I have worked on and am working on!
 nav: true
 nav_order: 3
-display_categories: [Federated Learning, Computer Vision]
+display_categories: [Computer Vision, Federated Learning]
 horizontal: false
 ---
 
