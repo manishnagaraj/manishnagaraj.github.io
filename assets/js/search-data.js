@@ -83,6 +83,11 @@ ninja.data = [{
           description: "Detecting Objects through Temporal Isolation of Events",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Dotie/";
+            },},{id: "projects-tofu",
+          title: 'TOFU',
+          description: "Toward Obfuscated Federated Udates - Encoding Weight Updates Into Gradients From Proxy Data for Communication-Efficient and Privacy-Enhanced Federated Learning.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Tofu/";
             },},{
         id: 'social-dblp',
         title: 'DBLP',
