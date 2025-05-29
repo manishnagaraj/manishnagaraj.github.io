@@ -59,7 +59,7 @@ TOFU (Toward Obfuscated Federated Updates) introduces a novel algorithm where cl
     Pictorial representation of TOFU's encoding process where real updates ($u_{real}$) are encoded into gradients from synthetic data ($U_{syn}$).
 </div>
 
-<br> <div class="row justify-content-sm-center">
+<div class="row justify-content-sm-center">
     <div class="col-sm-10 mt-3 mt-md-0"> {% include figure.liquid loading="eager" path="assets/img/TOFU_project/tofu_cifar_syn.png" title="Comparison of True and TOFU-Generated Synthetic Images" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
