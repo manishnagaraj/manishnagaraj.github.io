@@ -89,13 +89,6 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/Tofu/";
             },},{
-        id: 'social-dblp',
-        title: 'DBLP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://dblp.org/pid/241/0695.html", "_blank");
-        },
-      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
@@ -129,13 +122,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=K-ihHacAAAAJ", "_blank");
-        },
-      },{
-        id: 'social-semanticscholar',
-        title: 'Semantic Scholar',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.semanticscholar.org/author/153839324", "_blank");
         },
       },{
       id: 'light-theme',
