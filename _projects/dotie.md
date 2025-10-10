@@ -42,7 +42,10 @@ The fundamental principles behind the architecture are:
         <p>The architecture utilizes Leaky Integrate and Fire (LIF) neurons, which are sensitive to the temporal structure of input events. By tuning hyperparameters like the threshold and leak factor, these neurons can identify input spikes (events) that occur close together in time, effectively filtering events based on object speed. Instead of connecting each pixel directly to a neuron, DOTIE uses a weighted sum from a neighborhood of pixels (e.g., 3x3) as input to each neuron. This allows the SNN to better identify fast-moving objects by considering the spatio-temporal pattern of events.</p>
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DOTIE_project/LiF.gif" title="LIF Neuron Behavior" class="img-fluid rounded z-depth-1" %}
+        <img src="/assets/img/DOTIE_project/LiF.gif"
+            alt="LIF Neuron Behavior"
+            class="img-fluid rounded z-depth-1"
+            loading="lazy">
     </div>
 </div>
 <div class="caption">
@@ -75,7 +78,10 @@ To further validate DOTIE's real-time capabilities, a live demonstration was con
         {% include figure.liquid loading="eager" path="assets/img/DOTIE_project/setup.png" title="Live Demo Setup" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DOTIE_project/Large_circle.gif" title="Live DOTIE Output" class="img-fluid rounded z-depth-1" %}
+        <img src="/assets/img/DOTIE_project/Large_circle.gif"
+            alt="Live DOTIE Output"
+            class="img-fluid rounded z-depth-1"
+            loading="lazy">
     </div>
 </div>
 <div class="caption">
