@@ -10,17 +10,18 @@ status: Under review
 tags: ["Coresets", "Training Dynamics", "Generalization", "Compute/Storage Efficient"]
 ---
 
-**At a glance — Data Efficiency (Data Selection)**  
-**Problem.** Full-dataset training is wasteful when many samples add little to generalization.  
-**Idea.** Rank each training sample by how its **loss-difference trajectory** correlates with the **validation** loss trajectory (class-wise), and select the top-aligned examples.  
-**Why it works.** High correlation ↔ gradients better aligned with validation/test behavior → smaller subsets that preserve optimization and accuracy.  
-**Results.** On CIFAR-100 and ImageNet-1k, CLD coresets typically **match or outperform** strong baselines across subset sizes and are **within ~1%** when not leading; they **transfer across architectures** (ResNet→VGG/DenseNet) within ~1%; stable with **early/subsampled checkpoints**; lowest compute/storage among strong methods. 
+**At a glance — why CLD matters**  
+Training on *everything* is costly and often unnecessary. **CLD** (Correlation of Loss Differences) finds a **small subset of training data** that behaves like the full dataset by watching **how losses change over time**. If a sample’s loss rises/falls in sync with how validation loss moves, it’s likely carrying useful signal. Keep those, skip the rest.
+
+- **What you get:** core sets that typically **match or beat** strong baselines across subset sizes, **transfer** to new architectures, and can be computed with **lightweight logs** instead of gradients/Hessians.
+- **What it saves:** selection compute, storage, and later training time — with theory explaining when/why it works.
 
 ---
 
 ## Motivation
 
-Training and deploying large models is constrained by **compute, memory, and time**. Instead of training on everything, we want **small, high-impact subsets** that preserve performance. Many selectors require gradients, Hessians, or pairwise features; CLD uses only **per-sample losses across checkpoints**, making it **simple and scalable**.
+Large models are constrained by **compute, memory, and wall time**. The pragmatic question isn’t just *“how do I train?”* but *“what do I really need to train on?”* Many selection methods rely on **gradients**, **second-order information**, or **pairwise features**—powerful but heavy.  
+**CLD** keeps it simple: it needs only **per-sample losses over checkpoints** (scalars you likely log already).
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -28,46 +29,60 @@ Training and deploying large models is constrained by **compute, memory, and tim
   </div>
 </div>
 <div class="caption">
-  Suggested from Figure 1: examples illustrating high/low CLD and accuracy of positive/negative/zero CLD coresets.
+  Schematic intuition: “high-CLD” samples move in step with validation dynamics; “low-CLD” do not.
 </div>
 
 ---
 
-## Method Overview (Correlation of Loss Differences)
+## What CLD actually does
 
-For each training sample \(z_m\), record its **loss change per checkpoint** over T epochs:
-\[
+Think of training as a **timeline**. At each checkpoint, every sample’s loss goes **up or down a little**. Validation loss also moves.  
+If a sample’s *loss-change pattern over time* **correlates** with the validation loss-change pattern for its class, that sample is **influential** for generalization. CLD keeps the most aligned ones.
+
+**Minimal math (for completeness).** For each training sample $z_m$,
+$$
 \Delta(z_m) = \big[\ell(\theta_1, z_m) - \ell(\theta_0, z_m), \ldots, \ell(\theta_T, z_m) - \ell(\theta_{T-1}, z_m)\big].
-\]
-Compute the **class-wise** validation average trajectory \(\Delta'_{V,c}\). The **CLD score** is the (Pearson) correlation:
-\[
-\text{CLD}(z_m) = \rho\big(\Delta(z_m), \Delta'_{V,c}\big),
-\]
-and the coreset picks the **top-\(k_c\)** per class. No gradients or Hessians are needed; only scalar losses per checkpoint for train & validation.
+$$
+Let $\Delta'_{V,c}$ be the **class-wise** validation loss differences. The **CLD score** is the Pearson correlation
+$$
+\mathtt{CLD}(z_m) = \rho\!\big(\Delta(z_m),\, \Delta'_{V,c}\big).
+$$
+We keep the top-$k_c$ per class and union them into the coreset $C$.
 
-**Selection recipe (per class)**  
-1) Train a proxy/backbone; log per-sample train loss and per-sample validation loss each epoch.  
-2) Build \(\Delta(z_m)\) and \(\Delta'_{V,c}\).  
-3) Score by Pearson correlation and keep top-\(k_c\) per class; union over classes → coreset \(C\).
+**Why this is nice for systems:** it uses only **loss scalars** you can log with negligible overhead; no per-sample gradients or Hessians.
 
 ---
 
-## Theory (why CLD preserves optimization)
+## How CLD is implemented
 
-Under standard smoothness and bounded-gradient assumptions, training on a **high-CLD coreset** achieves a convergence bound **close to full-data training**, up to an additive term governed by (i) **alignment** \(\kappa\) (improves as CLD ↑ and subset size ↑) and (ii) **validation representativeness** \(\delta\). Intuitively: **high CLD ⇒ gradient alignment with validation** along the trajectory, so coreset updates follow the full-data optimization path.
+1. **Train a proxy/backbone** (e.g., ResNet-18) and log **per-sample train loss** each epoch (or every few epochs).  
+2. Create a small **per-class validation set** and log its **per-sample validation loss** similarly.  
+3. Compute loss **differences** (checkpoint-to-checkpoint), correlate train vs. validation **within each class**, and **keep top-$k_c$**.  
+4. **Train your target model** on the union of these per-class picks.
 
-> Takeaway: High CLD is both a **sufficient and necessary** condition (within the framework) for matching full-data optimization dynamics with a subset.
+*Tip:* You can compute CLD from **early checkpoints** (e.g., first 30–45 of 90) or **subsample the timeline** (e.g., every 2–3 epochs) with little impact on quality.
+
+---
+
+## Why CLD preserves optimization
+
+Under standard smoothness/bounded-gradient assumptions, if you train on **high-CLD** subsets, you follow the **same optimization path** as the full dataset **up to a small, explicit deviation**. Two drivers control that deviation:
+
+- **Alignment ($\kappa$):** how strongly your chosen samples’ loss changes line up with validation. Better alignment → smaller gap.  
+- **Validation representativeness ($\delta$):** whether the validation signal actually reflects what you care about.
+
+> **Takeaway:** high CLD is a principled way to *track* full-data training with far fewer samples.
 
 ---
 
 ## Results & Observations
 
-**Benchmarks & setup.** CIFAR-100 and ImageNet-1k; per-class validation split (10% and 1% respectively); 5 seeds; ResNet-18 for scoring and training unless specified; subset sizes from **0.2–100%** (CIFAR-100) and **0.1–100%** (ImageNet-1k).
+**Benchmarks & setup.** CIFAR-100 and ImageNet-1k; per-class validation splits (10% and 1% respectively); 5 seeds; ResNet-18 for scoring/training unless noted; subset sizes from **0.2–100%** (CIFAR-100) and **0.1–100%** (ImageNet-1k).
 
-- **Accuracy vs SOTA:** CLD typically **matches or outperforms** baselines (score-based, optimization-based, training-property–based) across sizes; when not leading, it’s **within ~1%** of the best. 
-- **Transferability:** Coresets selected with **ResNet-18** transfer to **ResNet-34/50, VGG-19, DenseNet-121** with **<~1%** gap to each model’s own (“oracle”) CLD selection. 
-- **Stability & early checkpoints:** Computing CLD from only the **first 30–45** of 90 epochs, or with **2–3× subsampling**, yields **nearly identical accuracy**.
-- **Bias & class balance:** CLD’s **per-class validation** alignment provides inherent **bias reduction**; adding external stratified sampling **hurts** performance.
+- **Accuracy vs SOTA:** CLD typically **matches or outperforms** score-based, optimization-based, and training-property baselines across subset sizes; when not leading, it’s usually **within ~1%** of the best.  
+- **Transferability:** Coresets selected with **ResNet-18** transfer to **ResNet-34/50, VGG-19, DenseNet-121** with **<~1%** gap to that model’s own (“oracle”) selection.  
+- **Stability & early checkpoints:** Using only the **first 30–45** of 90 epochs or **2–3×** checkpoint subsampling yields **nearly identical** results.  
+- **Bias & class balance:** Per-class validation alignment acts as a **bias reducer**; adding external stratified sampling often **hurts** CLD.
 
 <div class="my-3">
   {% include figure.liquid loading="eager"
@@ -88,9 +103,9 @@ Under standard smoothness and bounded-gradient assumptions, training on a **high
 
 ---
 
-## Compute & Storage Efficiency
+## Compute & storage efficiency
 
-CLD logs **one scalar per sample per checkpoint** (plus validation scalars), avoiding per-sample gradients, Hessians, or feature caches. Selection compute is **proxy-only** plus lightweight validation forwards; training on the coreset uses the target model as usual. In end-to-end compute vs accuracy, CLD lies near the **Pareto-efficient** frontier with a tiny selection-stage storage footprint (scalar logs). Early-epoch CLD (e.g., 45/90) achieves similar accuracy at **~½ the selection compute**.
+CLD logs **one scalar per sample per checkpoint** (plus validation scalars). No gradients, Hessians, or feature banks. Selection compute is **proxy-only**; once you have the subset, train your target model as usual. In end-to-end compute vs. accuracy, CLD sits near the **Pareto frontier**; **early-epoch CLD** (e.g., 45/90) keeps accuracy with ~half the selection compute.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -100,12 +115,12 @@ CLD logs **one scalar per sample per checkpoint** (plus validation scalars), avo
 
 ---
 
-## Practical Guidance
+## Practical guidance
 
-- **Proxy model.** Use a lightweight backbone (e.g., ResNet-18) to log losses; transfer the resulting coreset to larger targets.
-- **Validation set.** Build a **representative** per-class validation set; avoid heavy bias toward atypical/mislabeled examples (hurts CLD quality). Proportional sampling to the pool’s distribution works well. 
-- **Temporal budget.** If needed, compute CLD from **early checkpoints** or **subsampled** trajectories with minimal accuracy loss.
-- **No extra stratification.** External percentile-based stratification (e.g., CCS style) generally **reduces** CLD accuracy.
+- **Proxy model.** A light backbone (ResNet-18) is enough to score; the coreset **transfers** well to bigger targets.  
+- **Validation set.** Keep it **representative per class**. Heavy skew toward atypical/mislabeled samples **hurts** CLD. Proportional sampling to the pool usually works best.  
+- **Timeline budget.** Short on time? Use **early checkpoints** or **subsample**; CLD is robust.  
+- **No extra stratification.** Percentile-style stratification layered on top of CLD often **reduces** accuracy.
 
 <div class="row">
   <div class="col-sm-6 mt-3 mt-md-0">
@@ -118,9 +133,9 @@ CLD logs **one scalar per sample per checkpoint** (plus validation scalars), avo
 
 ---
 
-## Validation Proxy Study (why proxy quality matters)
+## Why proxy quality matters
 
-Varying the validation composition using memorization-based heuristics changes downstream CLD performance: **Highest-mem** (atypical) hurts; **Proportional** (to pool) is most reliable; mixing in some high-mem helps capture long-tail behavior. This underscores that **validation representativeness** directly affects CLD quality. 
+Changing the validation composition using memorization-based heuristics shifts downstream CLD performance. **Proportional** sampling to the pool is most reliable; **highest-memorization-only** tends to hurt, while a **light mix** can help long-tail behavior. The message: **validation representativeness directly impacts CLD**.
 
 <div class="row">
   <div class="col-sm-6 mt-3 mt-md-0">
@@ -130,6 +145,5 @@ Varying the validation composition using memorization-based heuristics changes d
     {% include figure.liquid loading="eager" path="assets/img/CLD_project/fig6b_val_study.png" title="Effect of validation composition on CLD coresets" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-
 
 You can find more details in the full paper: {% cite nagaraj2025coresets %}
