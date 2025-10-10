@@ -78,16 +78,21 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_8/";
+            },},{id: "projects-cld",
+          title: 'CLD',
+          description: "Coresets via correlation of loss differences (training-dynamics selection with theory).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cld/";
             },},{id: "projects-dotie",
           title: 'DOTIE',
           description: "Detecting Objects through Temporal Isolation of Events",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Dotie/";
+              window.location.href = "/projects/dotie/";
             },},{id: "projects-tofu",
           title: 'TOFU',
-          description: "Toward Obfuscated Federated Udates - Encoding Weight Updates Into Gradients From Proxy Data for Communication-Efficient and Privacy-Enhanced Federated Learning.",
+          description: "Toward Obfuscated Federated Updates — Encoding weight updates into gradients from proxy data for communication-efficient and privacy-enhanced federated learning.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Tofu/";
+              window.location.href = "/projects/tofu/";
             },},{
         id: 'social-email',
         title: 'email',
