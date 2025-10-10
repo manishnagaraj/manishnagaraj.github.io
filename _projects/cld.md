@@ -14,7 +14,7 @@ tags: ["Coresets", "Training Dynamics", "Generalization", "Compute/Storage Effic
 Training on *everything* is costly and often unnecessary. **CLD** (Correlation of Loss Differences) finds a **small subset of training data** that behaves like the full dataset by watching **how losses change over time**. If a sample’s loss rises/falls in sync with how validation loss moves, it’s likely carrying useful signal. Keep those, skip the rest.
 
 - **What you get:** core sets that typically **match or beat** strong baselines across subset sizes, **transfer** to new architectures, and can be computed with **lightweight logs** instead of gradients/Hessians.
-- **What it saves:** selection compute, storage, and later training time — with theory explaining when/why it works.
+- **What it saves:** selection compute, storage, and later training time.
 
 ---
 
