@@ -2,7 +2,7 @@
 layout: page
 title: CLD
 description: Coresets via correlation of loss differences (training-dynamics selection with theory).
-img: assets/img/CLD_project/cld_thumb.jpg
+img: assets/img/CLD_project/cld_thumb.png
 importance: 1
 category: Data Selection
 related_publications: true
