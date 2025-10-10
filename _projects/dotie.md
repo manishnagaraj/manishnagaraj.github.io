@@ -3,9 +3,20 @@ layout: page
 title: DOTIE
 description: Detecting Objects through Temporal Isolation of Events
 img: assets/img/DOTIE_project/spike_architecture.png
-importance: 1
-category: Computer Vision
+importance: 3
+category: Event Vision
 related_publications: true
+# optional extras (al-folio will ignore unknown keys gracefully)
+status: Published
+tags: ["Event Cameras", "Spiking NN", "Low Latency", "Energy Efficient"]
+---
+
+**At a glance — Data Efficiency (Event Vision)**  
+**Problem.** Onboard autonomy needs fast detection under tight power/latency budgets.  
+**Idea.** Use a minimalist SNN to **temporally isolate** motion and then **spatially cluster** events for object detection.  
+**Why it works.** Event streams are sparse and asynchronous; a single LIF layer aligns naturally with temporal structure.  
+**Results.** High IoU on MVSEC; **ultra-low latency**; **>10× energy savings** on neuromorphic hardware vs CPU.
+
 ---
 
 ## Motivation

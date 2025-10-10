@@ -1,11 +1,21 @@
 ---
 layout: page
 title: "TOFU"
-description: "Toward Obfuscated Federated Udates - Encoding Weight Updates Into Gradients From Proxy Data for Communication-Efficient and Privacy-Enhanced Federated Learning."
+description: "Toward Obfuscated Federated Updates — Encoding weight updates into gradients from proxy data for communication-efficient and privacy-enhanced federated learning."
 img: assets/img/TOFU_project/tofu_GA.png
-importance: 1
+importance: 2
 category: Federated Learning
 related_publications: true
+status: Published (IEEE Access 2024)
+tags: ["Federated Learning", "Privacy", "Communication Efficiency"]
+---
+
+**At a glance — Data Efficiency (Federated Learning)**  
+**Problem.** FL’s repeated **large update transfers** leak data and strain bandwidth.  
+**Idea.** Clients send **synthetic proxy inputs** whose aggregated gradients **reproduce** the intended update.  
+**Why it works.** Encode update geometry in input space (small), not parameter space (huge); proxies appear as noise → harder to invert.  
+**Results.** **4–6.8×** lower communication with near-full accuracy; privacy improved vs raw gradient sharing; small “full-update” tail recovers any gap.
+
 ---
 
 ## Motivation
