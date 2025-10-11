@@ -93,6 +93,11 @@ ninja.data = [{
           description: "Toward Obfuscated Federated Updates — Encoding weight updates into gradients from proxy data for communication-efficient and privacy-enhanced federated learning.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/tofu/";
+            },},{id: "projects-trim",
+          title: 'TRIM',
+          description: "Token-wise attention–derived saliency for efficient instruction-tuning data selection (forward-only).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/trim/";
             },},{
         id: 'social-email',
         title: 'email',
