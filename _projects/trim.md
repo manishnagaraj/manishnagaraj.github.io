@@ -2,7 +2,7 @@
 layout: page
 title: TRIM
 description: Token-wise attention–derived saliency for efficient instruction-tuning data selection (forward-only).
-img: assets/img/TRIM_project/trim_thumb.png
+img: assets/img/TRIM_project/fig1_overview.png
 importance: 0
 category: Data Selection
 related_publications: true
