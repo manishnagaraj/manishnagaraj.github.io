@@ -44,7 +44,6 @@ Selecting the **right data**, communicating **less**, and sensing **smarter**:
 
   {% assign categorized_projects = site.projects | where: "category", category %}
   <!-- Avoid duplicating TRIM below if it exists -->
-  {% assign categorized_projects = categorized_projects | where_exp: "p","p.title != 'TRIM'" %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}
 
   {% if page.horizontal %}
