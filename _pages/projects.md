@@ -24,19 +24,6 @@ Selecting the **right data**, communicating **less**, and sensing **smarter**:
 ---
 
 <!-- =========================
-     FEATURED: TRIM on top
-========================= -->
-{% assign trim = site.projects | where: "title", "TRIM" | first %}
-{% if trim %}
-## Featured: TRIM
-<div class="row row-cols-1 row-cols-md-2">
-  {% include projects.liquid project=trim %}
-</div>
-{% endif %}
-
----
-
-<!-- =========================
      THEMED SECTIONS
 ========================= -->
 <div class="projects">
