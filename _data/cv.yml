@@ -50,21 +50,21 @@
 - title: Research Projects
   type: time_table
   contents:
-    - title: Efficient Fine-tuning of LLMs Using Impact-Driven Data Selection
+    - title: Token-wise Attention-Derived Saliency for Data-Efficient Instruction Tuning
       institution: Ph.D. Dissertation, Purdue University
       year: Present
       description:
-        - Developed a lightweight, correlation-based data selection pipeline.
+        - Developed a  a forward-only data selection pipeline using interpretable multi-layer attention fingerprints.
         - Enables on-device personalization without gradients/Hessians.
-        - Transfers across model scales (e.g., LLaMA-3 8B - 70B).
-        - Work in progress.
-    - title: Finding the Muses- Identifying Coresets Through Loss Trajectories
+        - Transfers across model scales (e.g., LLaMA-3.2 1B - LLaMA-3.1 8B).
+        - Manuscript under review.
+    - title: Selecting Data via Correlation of Loss Differences
       institution: Ph.D. Dissertation, Purdue University
       year: 2025
       description:
-        - Introduced Loss Trajectory Correlation (LTC) metric.
+        - Introduced Correlation of Loss Differences (CLD) metric.
         - SOTA results on CIFAR-100 and ImageNet-1k.
-        - Manuscript under peer review.
+        - Accepted for publication at TMLR 2025.
     - title: DOTIE- Energy-Efficient Object Detection Using Event Cameras
       institution: Ph.D. Research, Purdue University
       year: 2023
