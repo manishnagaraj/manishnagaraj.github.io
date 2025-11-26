@@ -21,6 +21,10 @@ latest_posts:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
+
+scholar:
+  sort_by: year
+  order: descending
 ---
 
 I am a Ph.D. candidate in Electrical and Computer Engineering at Purdue University, working with [Professor Kaushik Roy](https://scholar.google.com/citations?user=to4P8KgAAAAJ&hl=en). I also received my M.S. in Electrical and Computer Engineering from Purdue University  and my B.E. in Electronics and Communications from PES Institute of Technology, Bangalore, India.
