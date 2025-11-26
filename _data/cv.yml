@@ -22,7 +22,7 @@
       year: 2019 - Present
       description:
         - GPA - 3.66
-        - Relevant Areas - Data Efficiency, Privacy-Preserving Machine Learning, Optimization Techniques
+        - Research Areas - Data efficiency for foundation models, large language models, multimodal learning, privacy-preserving machine learning, optimization techniques
         - Research Advisor - Prof. Kaushik Roy
     - title: MS in Electrical & Computer Engineering
       institution: Purdue University, West Lafayette, IN
@@ -43,50 +43,53 @@
       institution: Latent AI, Skillman, NJ
       year: Summer 2023
       description:
-        - Built data annotation tools for anomaly detection frameworks.
-        - Designed scalable systems for handling noisy datasets.
-        - Improved energy and latency metrics for internal ML tools.
+        - Built data annotation and visualization tools for anomaly detection frameworks.
+        - Designed scalable pipelines for noisy, real-world ML datasets on edge and embedded systems.
+        - Profiled and improved energy and latency metrics for internal deep learning tools.
 
 - title: Research Projects
   type: time_table
   contents:
-    - title: Token-wise Attention-Derived Saliency for Data-Efficient Instruction Tuning
-      institution: Ph.D. Dissertation, Purdue University
-      year: Present
-      description:
-        - Developed a  a forward-only data selection pipeline using interpretable multi-layer attention fingerprints.
-        - Enables on-device personalization without gradients/Hessians.
-        - Transfers across model scales (e.g., LLaMA-3.2 1B - LLaMA-3.1 8B).
-        - Manuscript under review.
-    - title: Selecting Data via Correlation of Loss Differences
+    - title: TRIM - Token-wise Attention-Derived Saliency for Data-Efficient Instruction Tuning
       institution: Ph.D. Dissertation, Purdue University
       year: 2025
       description:
-        - Introduced Correlation of Loss Differences (CLD) metric.
-        - SOTA results on CIFAR-100 and ImageNet-1k.
+        - Developed a forward-only data selection pipeline for LLM instruction tuning using interpretable multi-layer attention fingerprints.
+        - Improves data efficiency for models such as LLaMA-3.2 1B and LLaMA-3.1 8B without requiring gradients or Hessians.
+        - Enables cross-model and cross-scale transfer for personalization and domain adaptation.
+        - Manuscript under review.
+    - title: Coresets from Trajectories - Selecting Data via Correlation of Loss Differences
+      institution: Ph.D. Dissertation, Purdue University
+      year: 2025
+      description:
+        - Introduced the Correlation of Loss Differences (CLD) metric for scalable, gradient-free data selection.
+        - Achieved state-of-the-art coreset performance on CIFAR-100 and ImageNet-1K across multiple architectures.
+        - Demonstrated less than 1% degradation under cross-architecture transfer settings.
         - Accepted for publication at TMLR 2025.
-    - title: DOTIE- Energy-Efficient Object Detection Using Event Cameras
+    - title: DOTIE - Energy-Efficient Object Detection Using Event Cameras
+      institution: Ph.D. Research, Purdue University
+      year: 2024
+      description:
+        - Designed a lightweight object detection framework leveraging event-driven camera data and spiking neural networks.
+        - Demonstrated real-time performance on resource-constrained hardware.
+        - Presented at ICRA 2023 and CVPR 2023 Workshops.
+    - title: TOFU - Federated Learning with Data and Communication Efficiency
       institution: Ph.D. Research, Purdue University
       year: 2023
       description:
-        - Lightweight framework leveraging event-driven camera data.
-        - Demonstrated at ICRA 2023 and CVPR 2023 Workshops.
-    - title: TOFU- Federated Learning with Data and Communication Efficiency
-      institution: Ph.D. Research, Purdue University
-      year: 2023
-      description:
-        - Reduced communication overhead by 10x.
-        - Published at IEEE Access 2024.
+        - Proposed a federated learning framework that jointly improves data and communication efficiency for heterogeneous clients.
+        - Reduced communication overhead by up to 10x while maintaining model accuracy.
+        - Published in IEEE Access 2024.
 
 - title: Skills
   type: map
   contents:
     - name: Programming Languages and OS
-      value: Python, C, Ubuntu
+      value: Python, Ubuntu
     - name: Software Development Tools
       value: Docker, GitHub
     - name: DL Frameworks and Libraries
-      value: PyTorch, HuggingFace, OpenCV, numpy, scipy
+      value: PyTorch, Hugging Face Transformers, OpenCV, NumPy, SciPy
 
 - title: Relevant Coursework
   type: list
