@@ -30,12 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "Latest CV of Manish Nagaraj",
+        },{id: "nav-resume",
+          title: "Resume",
+          description: "Latest Resume of Manish Nagaraj",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/resume/";
           },
         },{id: "post-blog-post-on-federated-learning",
         
@@ -78,7 +78,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_8/";
-            },},{id: "projects-cld",
+            },},{id: "news-coresets-from-trajectories-selecting-data-via-correlation-of-loss-differences-got-accepted-for-publication-at-tmlr",
+          title: 'Coresets from Trajectories: Selecting Data via Correlation of Loss Differences got accepted for...',
+          description: "",
+          section: "News",},{id: "projects-cld",
           title: 'CLD',
           description: "Coresets via correlation of loss differences (training-dynamics selection with theory).",
           section: "Projects",handler: () => {
