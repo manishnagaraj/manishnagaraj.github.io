@@ -4,7 +4,7 @@ title: TRIM
 description: Token-wise attention–derived saliency for efficient instruction-tuning data selection (forward-only).
 img: assets/img/TRIM_project/fig1_overview.png
 importance: 0
-category: Data Selection
+category: Foundation Models & Data Selection
 related_publications: true
 status: Under review
 tags: ["LLMs", "Instruction Tuning", "Attention", "Token-level", "Coresets", "Forward-only"]

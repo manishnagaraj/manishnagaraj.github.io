@@ -4,9 +4,9 @@ title: CLD
 description: Coresets via correlation of loss differences (training-dynamics selection with theory).
 img: assets/img/CLD_project/cld_thumb.png
 importance: 1
-category: Data Selection
+category: Foundation Models & Data Selection
 related_publications: true
-status: Under review 
+status: Published (TMLR 2025) 
 tags: ["Coresets", "Training Dynamics", "Generalization", "Compute/Storage Efficient"]
 ---
 

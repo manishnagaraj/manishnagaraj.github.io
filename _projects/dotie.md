@@ -4,10 +4,10 @@ title: DOTIE
 description: Detecting Objects through Temporal Isolation of Events
 img: assets/img/DOTIE_project/spike_architecture.png
 importance: 3
-category: Event Vision
+category: Multimodal Perception & Robotics
 related_publications: true
 # optional extras (al-folio will ignore unknown keys gracefully)
-status: Published
+status: Published (ICRA2023, CVPR Workshops 2023)
 tags: ["Event Cameras", "Spiking NN", "Low Latency", "Energy Efficient"]
 ---
 

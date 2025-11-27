@@ -2,24 +2,24 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Some of the projects I have worked on and am working on!
+description: Research projects on data-efficient foundation models, multimodal perception, and federated learning.
 nav: true
 nav_order: 3
-# Use thesis-aligned themes as categories. Ensure each project file sets:
-#   category: "Data Selection" | "Federated Learning" | "Event Vision"
-display_categories: [Data Selection, Federated Learning, Event Vision]
+# Use role-aligned themes as categories. Ensure each project file sets:
+#   category: "Foundation Models & Data Selection" | "Multimodal Perception & Robotics" | "Federated & Distributed Learning"
+display_categories: [Foundation Models & Data Selection, Multimodal Perception & Robotics, Federated & Distributed Learning]
 horizontal: false
 ---
 
 <!-- =========================
-     HERO — thesis theme
+     HERO — role-aligned theme
 ========================= -->
-# Exploring Data Efficiency in Deep Learning Systems
+# Data-Efficient Foundation Models & Multimodal Systems
 
-Selecting the **right data**, communicating **less**, and sensing **smarter**:
-- **Data Selection** — identify small, high-impact subsets using training dynamics or attention structure.  
-- **Federated Learning** — reduce bandwidth and improve privacy via obfuscated, compact surrogates.  
-- **Event Vision** — exploit asynchronous, sparse signals for low-latency, energy-efficient perception.
+I work on making large models more practical under real constraints:
+- **Foundation Models & Data Selection** — select small, high-impact subsets for LLMs and vision models using training dynamics and attention structure.  
+- **Multimodal Perception & Robotics** — build lightweight, low-latency perception systems using event-based sensing and efficient architectures.  
+- **Federated & Distributed Learning** — reduce communication, preserve privacy, and keep performance competitive in real-world, heterogeneous settings.
 
 ---
 
@@ -33,17 +33,16 @@ Selecting the **right data**, communicating **less**, and sensing **smarter**:
     <h2 class="category">{{ category }}</h2>
   </a>
 
-  <!-- Per-theme micro-rationale (from your intro) -->
-  {% if category == "Data Selection" %}
-  <p><em>Select less, learn more:</em> Use <strong>training dynamics</strong> (loss trajectories) or <strong>token-level attention saliency</strong> to build small, effective coresets.</p>
-  {% elsif category == "Federated Learning" %}
-  <p><em>Communicate less, learn together:</em> Share <strong>proxy inputs</strong> that reproduce the intended update, cutting bandwidth and hindering inversion.</p>
-  {% elsif category == "Event Vision" %}
-  <p><em>Sense smarter, act faster:</em> Leverage <strong>asynchronous event streams</strong> with minimalist spiking models for low-latency detection.</p>
+  <!-- Per-theme micro-rationale -->
+  {% if category == "Foundation Models & Data Selection" %}
+  <p><em>Select less, learn more:</em> Develop methods like <strong>attention-based token saliency</strong> and <strong>loss-trajectory coresets</strong> to train LLMs and vision models efficiently without sacrificing accuracy.</p>
+  {% elsif category == "Multimodal Perception & Robotics" %}
+  <p><em>Perceive faster, on cheaper hardware:</em> Use <strong>event cameras</strong> and <strong>compact neural architectures</strong> to enable real-time detection and tracking for robotics and embedded platforms.</p>
+  {% elsif category == "Federated & Distributed Learning" %}
+  <p><em>Learn collaboratively, communicate less:</em> Build <strong>communication- and data-efficient federated learning</strong> methods that handle heterogeneous clients while preserving privacy and model quality.</p>
   {% endif %}
 
   {% assign categorized_projects = site.projects | where: "category", category %}
-  <!-- Avoid duplicating TRIM below if it exists -->
   {% assign sorted_projects = categorized_projects | sort: "importance" %}
 
   {% if page.horizontal %}
@@ -92,10 +91,16 @@ Selecting the **right data**, communicating **less**, and sensing **smarter**:
      HINTS FOR ORDERING
 ========================= -->
 <!--
-To keep ordering stable beneath the TRIM feature:
-- In each project’s front matter, set a numeric `importance` (lower = earlier).
-- Suggested order within themes:
-  Data Selection: CLD (1), TRIM (handled above), others…
-  Federated Learning: TOFU (1), others…
-  Event Vision: DOTIE (1), others…
+In each project’s front matter, set:
+  category: "Foundation Models & Data Selection" | "Multimodal Perception & Robotics" | "Federated & Distributed Learning"
+  importance: <number>   # lower = earlier
+
+Suggested mapping:
+  Foundation Models & Data Selection:
+    - TRIM
+    - Coresets from Trajectories
+  Multimodal Perception & Robotics:
+    - DOTIE / event vision work
+  Federated & Distributed Learning:
+    - TOFU and related FL projects
 -->

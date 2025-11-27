@@ -4,7 +4,7 @@ title: "TOFU"
 description: "Toward Obfuscated Federated Updates — Encoding weight updates into gradients from proxy data for communication-efficient and privacy-enhanced federated learning."
 img: assets/img/TOFU_project/tofu_GA.png
 importance: 2
-category: Federated Learning
+category: Federated & Distributed Learning
 related_publications: true
 status: Published (IEEE Access 2024)
 tags: ["Federated Learning", "Privacy", "Communication Efficiency"]
