@@ -27,6 +27,8 @@ scholar:
   order: descending
 ---
 
+**Data-efficient Deep Learning · Federated & Privacy Preserving AI · Efficient Fine-tuning of Large Language Model**
+
 I am a Ph.D. candidate in Electrical and Computer Engineering at Purdue University, working with [Professor Kaushik Roy](https://scholar.google.com/citations?user=to4P8KgAAAAJ&hl=en). I also received my M.S. in Electrical and Computer Engineering from Purdue University  and my B.E. in Electronics and Communications from PES Institute of Technology, Bangalore, India.
 
 My doctoral dissertation, "**Exploring Data Efficiency for Deep Learning Systems**" looks at how to make modern deep learning, especially large language and vision models, more practical and scalable. I work on methods that identify which data actually matters for training, so that we can fine-tune and deploy large models with less compute and without sacrificing performance.
