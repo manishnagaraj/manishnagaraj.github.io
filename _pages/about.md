@@ -27,7 +27,7 @@ scholar:
   order: descending
 ---
 
-**Data-efficient Deep Learning · Federated & Privacy Preserving AI · Efficient Fine-tuning of Large Language Model**
+**Data Efficiency · Efficient Fine-tuning · Federated Learning · Large Language Models**
 
 I am a Ph.D. candidate in Electrical and Computer Engineering at Purdue University, working with [Professor Kaushik Roy](https://scholar.google.com/citations?user=to4P8KgAAAAJ&hl=en). I also received my M.S. in Electrical and Computer Engineering from Purdue University  and my B.E. in Electronics and Communications from PES Institute of Technology, Bangalore, India.
 
