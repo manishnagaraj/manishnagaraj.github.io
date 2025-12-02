@@ -104,6 +104,17 @@
     - Distributed Computer Systems
     - Computer Networks
 
+- title: Reviewer Service
+  type: list
+  contents:
+    - <a href="https://www.ieee-ras.org/publications/ra-l">IEEE Robotics and Automation Letters</a> (2024)
+    - <a href="https://jmlr.org/tmlr/">Transactions on Machine Learning Research</a> (2023 - Present)
+    - <a href="https://neurips.cc/">Neural Information Processing Systems, NeurIPS</a> (2025 - Present)
+    - <a href="https://aaai.org/conference/aaai/">AAAI Conference on Artificial Intelligence (2024 - Present)
+    - <a href="https://cvpr.thecvf.com/">The IEEE/CVF Conference on Computer Vision and Pattern Recognition, CVPR</a> (2024 - Present)
+    - <a href="https://icml.cc/">International Conference on Machine Learning, ICML</a> (2025 - Present)
+    - <a href="https://iclr.cc/">International Conference on Learning Representations, ICLR</a> (2024 - Present)
+
 - title: References
   type: list
   contents:
