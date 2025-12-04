@@ -38,17 +38,6 @@
       description:
         - GPA - 9.77/10.0
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Research Intern, Integrated Systems Team
-      institution: Latent AI, Skillman, NJ
-      year: Summer 2023
-      description:
-        - Built data annotation and visualization tools for anomaly detection frameworks.
-        - Designed scalable pipelines for noisy, real-world ML datasets on edge and embedded systems.
-        - Profiled and improved energy and latency metrics for internal deep learning tools.
-
 - title: Research Projects
   type: time_table
   contents:
@@ -82,6 +71,18 @@
         - Proposed a federated learning framework that jointly improves data and communication efficiency for heterogeneous clients.
         - Reduced communication overhead by up to 10x while maintaining model accuracy.
         - Published in IEEE Access 2024.
+
+- title: Industry Experience
+  type: time_table
+  contents:
+    - title: Research Intern, Integrated Systems Team
+      institution: Latent AI, Skillman, NJ
+      year: Summer 2023
+      description:
+        - Prototyped an unsupervised anomaly detection pipeline for automated target recognition using state-of-the-art methods via Anomalib on MVTEC-AD and internal sensor datasets.
+        - Built an interactive labeling tool combining classical computer vision and SAM to generate pixel-wise masks on noisy imagery, reducing manual annotation time.
+        - Exported top models to ONNX and used the <a href="https://latentai.com/platform-overview/">Latent AI Efficient Inference Platform (LEIP)</a> to compile and optimize them for edge devices, achieving 4x energy-efficiency gains over unoptimized baselines.
+        - Summarized experiments and findings in internal documentation and presentations to support ongoing edge inference pipeline development.
 
 - title: Skills
   type: map
