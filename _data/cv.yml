@@ -63,10 +63,10 @@
       institution: Ph.D. Research, Purdue University
       year: 2024
       description:
-         - Proposed a federated learning scheme that encodes each client’s model update as gradients on a small synthetic dataset, transmitting proxies instead of full weight updates.
-         - On MNIST and CIFAR-10, achieved up to ~4× and ~6.6× lower communication cost than a standard federated learning baseline, while maintaining comparable final accuracy.
+         - Proposed a federated learning scheme that encodes each client's model update as gradients on a small synthetic dataset, transmitting proxies instead of full weight updates.
+         - On MNIST and CIFAR-10, achieved up to ~4x and ~6.6x lower communication cost than a standard federated learning baseline, while maintaining comparable final accuracy.
          - Enhanced privacy against gradient inversion attacks- proxy data and reconstructed inputs resemble noise and fail to reveal meaningful client information.
-         - Studied accuracy–communication–privacy trade-offs by varying proxy size and update frequency, yielding practical guidelines for bandwidth-constrained federated deployments.
+         - Studied accuracy-communication-privacy trade-offs by varying proxy size and update frequency, yielding practical guidelines for bandwidth-constrained federated deployments.
          - Published in IEEE Access 2024.
 
     - title: DOTIE - Energy-Efficient Object Detection Using Event Cameras
