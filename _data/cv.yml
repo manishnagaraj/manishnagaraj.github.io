@@ -77,7 +77,7 @@
          - On the MVSEC outdoor driving dataset, more than doubled the mean IoU over prior event-based methods and achieved near-perfect foreground detection.
          - Achieved roughly six orders of magnitude lower energy consumption and significantly reduced latency compared to a YOLO CNN baseline on the same data.
          - Maintained performance across diverse scenes with minimal retuning, enabling deployment in low-power autonomous navigation and neuromorphic systems.
-        - Presented at ICRA 2023 and CVPR 2023 Workshops.
+         - Presented at ICRA 2023 and CVPR 2023 Workshops.
 
 
 - title: Industry Experience
