@@ -21,22 +21,19 @@
   contents:
     - title: PhD in Electrical & Computer Engineering
       institution: Purdue University, West Lafayette, IN
-      year: 2019 - Present
+      year: May 2026 (Expected)
       description:
-        - GPA - 3.66
-        - Research Areas - Data efficiency for foundation models, large language models, multimodal learning, privacy-preserving machine learning, optimization techniques
+        - Research Areas - Data Efficiency, Efficient Fine-tuning, Federated Learning, Large Language Models
         - Research Advisor - Prof. Kaushik Roy
     - title: MS in Electrical & Computer Engineering
       institution: Purdue University, West Lafayette, IN
-      year: 2017 - 2019
+      year: May 2019
       description:
-        - GPA - 3.72
         - Thesis - Energy Efficient Byzantine Agreement Protocols for Cyber-Physical Resilience
     - title: Bachelor of Engineering in Electronics and Communications
       institution: PES Institute of Technology and Science, Bangalore, India
-      year: 2013 - 2017
-      description:
-        - GPA - 9.77/10.0
+      year: May 2017
+
 
 - title: Research Projects
   type: time_table
@@ -45,32 +42,43 @@
       institution: Ph.D. Dissertation, Purdue University
       year: 2025
       description:
-        - Developed a forward-only data selection pipeline for LLM instruction tuning using interpretable multi-layer attention fingerprints.
-        - Improves data efficiency for models such as LLaMA-3.2 1B and LLaMA-3.1 8B without requiring gradients or Hessians.
-        - Enables cross-model and cross-scale transfer for personalization and domain adaptation.
-        - Manuscript under review.
+         - Proposed a forward-only, gradient-free data selection method that builds attention-based token “fingerprints” to score instruction-tuning examples.
+         - Selected instruction examples that most improved performance on reasoning and commonsense benchmarks for open-source LLMs under small data budgets.
+         - TRIM-selected coresets outperformed state-of-the-art coreset baselines by up to ~9% on downstream tasks and, in some settings, matched or surpassed full-data fine-tuning.
+         - Demonstrated computational scalability- in a shared coreset selection setup, TRIM achieved higher downstream accuracy while running ~2.6× faster than the best gradient-based baseline.
+         - Under Review
+
     - title: Coresets from Trajectories - Selecting Data via Correlation of Loss Differences
       institution: Ph.D. Dissertation, Purdue University
       year: 2025
       description:
-        - Introduced the Correlation of Loss Differences (CLD) metric for scalable, gradient-free data selection.
-        - Achieved state-of-the-art coreset performance on CIFAR-100 and ImageNet-1K across multiple architectures.
-        - Demonstrated less than 1% degradation under cross-architecture transfer settings.
-        - Accepted for publication at TMLR 2025.
-    - title: DOTIE - Energy-Efficient Object Detection Using Event Cameras
+         - Introduced Correlation of Loss Differences (CLD), a gradient-free coreset metric that ranks training points by
+          how closely their loss-change trajectories correlate with a small validation set.
+         - Established a convergence guarantee- training on CLD-selected coresets tracks full-data optimization up to a provable error bound.
+         - On CIFAR-100 and ImageNet-1k, achieved state-of-the-art coreset selection performance, typically within ~1% of more computationally expensive methods across subset sizes.
+         - Demonstrated cross-architecture transfer- coresets selected with small proxy CNNs generalized to larger CNN and vision-transformer models with <1% accuracy drop.
+         - Accepted for publication at TMLR 2025.
+
+    - title: TOFU - Federated Learning with Data and Communication Efficiency
       institution: Ph.D. Research, Purdue University
       year: 2024
       description:
-        - Designed a lightweight object detection framework leveraging event-driven camera data and spiking neural networks.
-        - Demonstrated real-time performance on resource-constrained hardware.
-        - Presented at ICRA 2023 and CVPR 2023 Workshops.
-    - title: TOFU - Federated Learning with Data and Communication Efficiency
+         - Proposed a federated learning scheme that encodes each client’s model update as gradients on a small synthetic dataset, transmitting proxies instead of full weight updates.
+         - On MNIST and CIFAR-10, achieved up to ~4× and ~6.6× lower communication cost than a standard federated learning baseline, while maintaining comparable final accuracy.
+         - Enhanced privacy against gradient inversion attacks- proxy data and reconstructed inputs resemble noise and fail to reveal meaningful client information.
+         - Studied accuracy–communication–privacy trade-offs by varying proxy size and update frequency, yielding practical guidelines for bandwidth-constrained federated deployments.
+         - Published in IEEE Access 2024.
+
+    - title: DOTIE - Energy-Efficient Object Detection Using Event Cameras
       institution: Ph.D. Research, Purdue University
       year: 2023
       description:
-        - Proposed a federated learning framework that jointly improves data and communication efficiency for heterogeneous clients.
-        - Reduced communication overhead by up to 10x while maintaining model accuracy.
-        - Published in IEEE Access 2024.
+         - Developed an event-camera object detection pipeline using a lightweight spiking layer plus density-based clustering to isolate moving objects without frame reconstruction.
+         - On the MVSEC outdoor driving dataset, more than doubled the mean IoU over prior event-based methods and achieved near-perfect foreground detection.
+         - Achieved roughly six orders of magnitude lower energy consumption and significantly reduced latency compared to a YOLO CNN baseline on the same data.
+         - Maintained performance across diverse scenes with minimal retuning, enabling deployment in low-power autonomous navigation and neuromorphic systems.
+        - Presented at ICRA 2023 and CVPR 2023 Workshops.
+
 
 - title: Industry Experience
   type: time_table
@@ -87,12 +95,16 @@
 - title: Skills
   type: map
   contents:
-    - name: Programming Languages and OS
-      value: Python, Ubuntu
-    - name: Software Development Tools
-      value: Docker, GitHub
-    - name: DL Frameworks and Libraries
-      value: PyTorch, Hugging Face Transformers, OpenCV, NumPy, SciPy
+    - name: Programming & Scripting
+      value: Python, Bash
+    - name: Platforms
+      value: Linux (Ubuntu, Red Hat), SLURM-based GPU clusters
+    - name: Deep Learning & ML
+      value: PyTorch, Hugging Face Transformers, NumPy, pandas, scikit-learn, OpenCV
+    - name: Distributed & Large-Scale Training
+      value: PyTorch DDP, DeepSpeed, TensorBoard
+    - name: Tools & Packaging
+      value: Docker, Git/GitHub, Conda
 
 - title: Relevant Coursework
   type: list
@@ -116,7 +128,3 @@
     - <a href="https://icml.cc/">International Conference on Machine Learning, ICML</a> (2025 - Present)
     - <a href="https://iclr.cc/">International Conference on Learning Representations, ICLR</a> (2024 - Present)
 
-- title: References
-  type: list
-  contents:
-    - Prof. Kaushik Roy, Purdue University, West Lafayette, USA - kaushik@purdue.edu
