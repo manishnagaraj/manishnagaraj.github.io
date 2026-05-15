@@ -188,16 +188,15 @@
   preview={CLD_Overview.png},
 }
 
-@misc{nagaraj2025trim,
+@inproceedings{nagaraj2025trim,
       title={TRIM: Token-wise Attention-Derived Saliency for Data-Efficient Instruction Tuning}, 
       author={Manish Nagaraj and Sakshi Choudhary and Utkarsh Saxena and Deepak Ravikumar and Kaushik Roy},
       abstract={Instruction tuning is essential for aligning large language models (LLMs) to downstream tasks and commonly relies on large, diverse corpora. However, small, high-quality subsets, known as coresets, can deliver comparable or superior results, though curating them remains challenging. Existing methods often rely on coarse, sample-level signals like gradients, an approach that is computationally expensive and overlooks fine-grained features. To address this, we introduce TRIM (Token Relevance via Interpretable Multi-layer Attention), a forward-only, token-centric framework. Instead of using gradients, TRIM operates by matching underlying representational patterns identified via attention-based "fingerprints" from a handful of target samples. Such an approach makes TRIM highly efficient and uniquely sensitive to the structural features that define a task. Coresets selected by our method consistently outperform state-of-the-art baselines by up to 9% on downstream tasks and even surpass the performance of full-data fine-tuning in some settings. By avoiding expensive backward passes, TRIM achieves this at a fraction of the computational cost. These findings establish TRIM as a scalable and efficient alternative for building high-quality instruction-tuning datasets.},
-      year={2025},
-      eprint={2510.07118},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2510.07118}, 
+      booktitle={Forty-third International Conference on Machine Learning},
+      year={2026},
+      url={https://openreview.net/forum?id=25AaIQjAg9}
       doi={10.48550/arXiv.2510.07118},
+      code={https://github.com/manishnagaraj/TRIM_Tokenwise_Efficient_Finetuning},
       selected={true},
       bibtex_show={true},
       preview={TRIM_Overview.png},

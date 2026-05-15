@@ -6,3 +6,4 @@ repo_description_lines_max: 2
 github_repos:
   - manishnagaraj/DOTIE
   - manishnagaraj/CLD_Coresets_from_Trajectories
+  - manishnagaraj/TRIM_Tokenwise_Efficient_Finetuning
