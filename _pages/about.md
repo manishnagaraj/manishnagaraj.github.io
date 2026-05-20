@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: "<a href='https://engineering.purdue.edu/ECE'>Purdue University</a>, <a href='https://engineering.purdue.edu/NRL'>Nano(Neuro) Electronics Laboratory</a>."
+subtitle: " <a href='https://www.uber.com/us/en/ai-solutions/resources/gen-ai/'>Uber Technologies</a>, <a href='https://engineering.purdue.edu/ECE'>Purdue University</a>, <a href='https://engineering.purdue.edu/NRL'>Nano(Neuro) Electronics Laboratory</a>."
 
 profile:
   align: right
