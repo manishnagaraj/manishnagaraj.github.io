@@ -27,16 +27,17 @@ scholar:
   order: descending
 ---
 
-**Data Efficiency · Efficient Fine-tuning · Federated Learning · Large Language Models**
+**Data Efficiency · Efficient Fine-tuning · Large Language Models**
 
-I am a Ph.D. candidate in Electrical and Computer Engineering at Purdue University, working with [Professor Kaushik Roy](https://scholar.google.com/citations?user=to4P8KgAAAAJ&hl=en). I also received my M.S. in Electrical and Computer Engineering from Purdue University  and my B.E. in Electronics and Communications from PES Institute of Technology, Bangalore, India.
+I am currently working as a Machine Learning Engineer at Uber Technologies. Broadly, I’m interested in techniques that make foundation models, LLMs, vision models, and multimodal systems, more compact, accurate, and deployable in real applications.
 
-My doctoral dissertation, "**Exploring Data Efficiency for Deep Learning Systems**" looks at how to make modern deep learning, especially large language and vision models, more practical and scalable. I work on methods that identify which data actually matters for training, so that we can fine-tune and deploy large models with less compute and without sacrificing performance.
+I received my Ph.D. in Electrical and Computer Engineering at Purdue University, working with [Professor Kaushik Roy](https://scholar.google.com/citations?user=to4P8KgAAAAJ&hl=en). I also received my M.S. in Electrical and Computer Engineering from Purdue University  and my B.E. in Electronics and Communications from PES Institute of Technology, Bangalore, India.
 
-Recently, this has included:
+My doctoral dissertation, "**Exploring Data Efficiency for Deep Learning Systems**" looked at how to make modern deep learning, especially large language and vision models, more practical and scalable. I worked on methods that identify which data actually matters for training, so that we can fine-tune and deploy large models with less compute and without sacrificing performance. This has included:
 - ['TRIM: Token-wise Attention-Derived Saliency for Data-Efficient Instruction Tuning'](https://arxiv.org/abs/2510.07118) - a forward-only, attention-based approach for selecting instruction-tuning data for LLMs, accepted for publication at ICML 2026.
 - ['Coresets from Trajectories: Selecting Data via Correlation of Loss Differences'](https://openreview.net/forum?id=QY0pbZTWJ9) - a gradient-free coreset method for large-scale vision training, accepted at TMLR.
 - ['TOFU: Federated Learning with Data and Communication Efficiency'](https://ieeexplore.ieee.org/abstract/document/10504799) - improving data and communication efficiency in federated learning, published in IEEE Access.
 - ['DOTIE: Energy-Efficient Object Detection Using Event Cameras'](https://ieeexplore.ieee.org/abstract/document/10161164) - event-based object detection with spiking neural networks, demonstrated at the 2023 IEEE International Conference on Robotics and Automation (ICRA) and [CVPR workshops](https://openaccess.thecvf.com/content/CVPR2023W/EventVision/html/Roy_Live_Demonstration_Real-Time_Event-Based_Speed_Detection_Using_Spiking_Neural_Networks_CVPRW_2023_paper.html).
 
-Across these projects, the common thread is data efficiency for large models: selecting informative subsets, scaling training under real-world constraints, and making models usable in settings like federated learning, robotics, and resource-limited hardware. Broadly, I’m interested in techniques that make foundation models, LLMs, vision models, and multimodal systems, more compact, accurate, and deployable in real applications.
+Across these projects, the common thread was data efficiency for large models: selecting informative subsets, scaling training under real-world constraints, and making models usable in settings like federated learning, robotics, and resource-limited hardware. 
+
