@@ -87,6 +87,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-completed-my-phd-i-want-to-specially-thank-my-committee-members-and-friends-for-all-the-support",
           title: 'I completed my PhD! I want to specially thank my committee members and...',
           description: "",
+          section: "News",},{id: "news-i-m-happy-to-share-that-i-m-starting-a-new-position-as-machine-learning-engineer-at-uber-technologies",
+          title: 'I’m happy to share that I’m starting a new position as Machine Learning...',
+          description: "",
           section: "News",},{id: "projects-cld",
           title: 'CLD',
           description: "Coresets via correlation of loss differences (training-dynamics selection with theory).",
@@ -112,7 +115,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6D%6E%61%67%61%72%61@%70%75%72%64%75%65.%65%64%75", "_blank");
+          window.open("mailto:%6D%61%6E%69%73%68.%6E%61%67%61%72%61%6A@%75%62%65%72.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
