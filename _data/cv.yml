@@ -4,7 +4,7 @@
     - name: Full Name
       value: Manish Nagaraj
     - name: Email
-      value: mnagara@purdue.edu
+      value: manishnagaraj1@gmail.com
     - name: Phone
       value: +1-765-701-7970
     - name: LinkedIn
@@ -23,8 +23,7 @@
       institution: Purdue University, West Lafayette, IN
       year: May 2026
       description:
-        - Research Areas - Data Efficiency, Efficient Fine-tuning, Federated Learning, Large Language Models
-        - Research Advisor - Prof. Kaushik Roy
+        - Thesis - Exploring Data Efficiency for Deep Learning Systems
     - title: MS in Electrical & Computer Engineering
       institution: Purdue University, West Lafayette, IN
       year: May 2019
@@ -34,19 +33,52 @@
       institution: PES Institute of Technology and Science, Bangalore, India
       year: May 2017
 
+- title: Industry Experience
+  type: time_table
+  contents:
+    - title: Machine Learning Engineer II
+      institution: Uber Technologies, Sunnyvale, CA
+      year: Present
+      description:
+        - Building and improving LLM-powered systems that support automated product workflows.
+        - Designing evaluation pipelines and curating benchmark datasets to systematically measure and improve LLM component quality.
+        - Developing and iterating on prompting strategies through data-driven experimentation and error analysis.
+        - Contributing tooling for safely evaluating and deploying iterative improvements to LLM-enabled systems.
+    - title: Research Intern, Integrated Systems Team
+      institution: Latent AI, Skillman, NJ
+      year: Summer 2023
+      description:
+        - Prototyped an unsupervised anomaly detection pipeline for automated target recognition using state-of-the-art methods via Anomalib on MVTEC-AD and internal sensor datasets.
+        - Built an interactive labeling tool combining classical computer vision and SAM to generate pixel-wise masks on noisy imagery, reducing manual annotation time.
+        - Exported top models to ONNX and used the <a href="https://latentai.com/platform-overview/">Latent AI Efficient Inference Platform (LEIP)</a> to compile and optimize them for edge devices, achieving 4x energy-efficiency gains over unoptimized baselines.
+        - Summarized experiments and findings in internal documentation and presentations to support ongoing edge inference pipeline development.
+
+- title: Skills
+  type: map
+  contents:
+    - name: Languages
+      value: Python, Bash, SQL
+    - name: ML & LLM Frameworks
+      value: PyTorch, LangChain/LangGraph, Hugging Face Transformers, PEFT/LoRA, vLLM, scikit-learn, OpenCV
+    - name: Distributed & Large-Scale Training
+      value: PyTorch DDP, DeepSpeed
+    - name: Data & Experimentation
+      value: NumPy, pandas, Weights & Biases, TensorBoard, A/B testing frameworks
+    - name: Infrastructure
+      value: Linux, Docker, Git/GitHub, ONNX, CI/CD pipelines
 
 - title: Research Projects
   type: time_table
   contents:
     - title: TRIM - Token-wise Attention-Derived Saliency for Data-Efficient Instruction Tuning
       institution: Ph.D. Dissertation, Purdue University
-      year: 2025
+      year: 2026
       description:
          - Proposed a forward-only, gradient-free data selection method that builds attention-based token “fingerprints” to score instruction-tuning examples.
          - Selected instruction examples that most improved performance on reasoning and commonsense benchmarks for open-source LLMs under small data budgets.
          - TRIM-selected coresets outperformed state-of-the-art coreset baselines by up to ~9% on downstream tasks and, in some settings, matched or surpassed full-data fine-tuning.
          - Demonstrated computational scalability- in a shared coreset selection setup, TRIM achieved higher downstream accuracy while running ~2.6× faster than the best gradient-based baseline.
-         - Under Review
+         - Accepted for publication at ICML 2026.
 
     - title: Coresets from Trajectories - Selecting Data via Correlation of Loss Differences
       institution: Ph.D. Dissertation, Purdue University
@@ -79,32 +111,6 @@
          - Maintained performance across diverse scenes with minimal retuning, enabling deployment in low-power autonomous navigation and neuromorphic systems.
          - Presented at ICRA 2023 and CVPR 2023 Workshops.
 
-
-- title: Industry Experience
-  type: time_table
-  contents:
-    - title: Research Intern, Integrated Systems Team
-      institution: Latent AI, Skillman, NJ
-      year: Summer 2023
-      description:
-        - Prototyped an unsupervised anomaly detection pipeline for automated target recognition using state-of-the-art methods via Anomalib on MVTEC-AD and internal sensor datasets.
-        - Built an interactive labeling tool combining classical computer vision and SAM to generate pixel-wise masks on noisy imagery, reducing manual annotation time.
-        - Exported top models to ONNX and used the <a href="https://latentai.com/platform-overview/">Latent AI Efficient Inference Platform (LEIP)</a> to compile and optimize them for edge devices, achieving 4x energy-efficiency gains over unoptimized baselines.
-        - Summarized experiments and findings in internal documentation and presentations to support ongoing edge inference pipeline development.
-
-- title: Skills
-  type: map
-  contents:
-    - name: Programming & Scripting
-      value: Python, Bash
-    - name: Platforms
-      value: Linux (Ubuntu, Red Hat), SLURM-based GPU clusters
-    - name: Deep Learning & ML
-      value: PyTorch, Hugging Face Transformers, NumPy, pandas, scikit-learn, OpenCV
-    - name: Distributed & Large-Scale Training
-      value: PyTorch DDP, DeepSpeed, TensorBoard
-    - name: Tools & Packaging
-      value: Docker, Git/GitHub, Conda
 
 - title: Relevant Coursework
   type: list

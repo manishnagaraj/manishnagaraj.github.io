@@ -6,7 +6,7 @@ subtitle: " <a href='https://www.uber.com/us/en/ai-solutions/resources/gen-ai/'>
 
 profile:
   align: right
-  image: Profile_pic.jpg
+  image: Profile_pic2.png
   image_circular: false # crops the image to make it circular
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -27,9 +27,9 @@ scholar:
   order: descending
 ---
 
-**Data Efficiency · Efficient Fine-tuning · Large Language Models**
+**Agentic AI · Data Efficiency · Efficient Fine-tuning · Large Language Models**
 
-I am currently working as a Machine Learning Engineer at Uber Technologies. Broadly, I’m interested in techniques that make foundation models, LLMs, vision models, and multimodal systems, more compact, accurate, and deployable in real applications.
+I am a Machine Learning Engineer at Uber Technologies working on LLM-enabled and agentic AI systems. My broader research interests include efficient foundation models, model evaluation, data-efficient fine-tuning, model compression, and scalable deployment. Broadly, I’m interested in techniques that make foundation models, LLMs, vision models, and multimodal systems, more compact, accurate, and deployable in real applications.
 
 I received my Ph.D. in Electrical and Computer Engineering at Purdue University, working with [Professor Kaushik Roy](https://scholar.google.com/citations?user=to4P8KgAAAAJ&hl=en). I also received my M.S. in Electrical and Computer Engineering from Purdue University  and my B.E. in Electronics and Communications from PES Institute of Technology, Bangalore, India.
 
