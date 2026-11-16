@@ -6,7 +6,7 @@ subtitle: " <a href='https://www.uber.com/us/en/ai-solutions/resources/gen-ai/'>
 
 profile:
   align: right
-  image: Profile_pic2.png
+  image: Profile_pic3.png
   image_circular: false # crops the image to make it circular
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
